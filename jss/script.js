@@ -57,6 +57,10 @@ button.onclick = () => {
         duration:.12
     })
 
+    .set("#treasure",{
+    zIndex:1
+    })
+
     // Invitation appears
     .to("#invite-container",{
     opacity:1,
