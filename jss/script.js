@@ -59,35 +59,32 @@ button.onclick = () => {
 
     // Invitation appears
     .to("#invite-container",{
-        opacity:1,
-        duration:1
-    })
+    opacity:1,
+    duration:1,
+    onComplete: () => {
 
-    confetti({
+        confetti({
+            particleCount:180,
+            spread:90,
+            origin:{y:.65}
+        });
 
-    particleCount:180,
-
-    spread:90,
-
-    origin:{y:.65}
-
-    });
+    }
+})
 
     .from(".invite-image",{
 
-        y:250,
+    y:250,
 
-        scale:.2,
+    scale:.2,
 
-        rotation:-12,
+    rotation:-12,
 
-        duration:1.6,
+    duration:1.6,
 
-        ease:"back.out(1.4)"
+    ease:"back.out(1.4)"
 
-    });
-
-}
+});
 
 
 const container=document.getElementById("bubble-container");
