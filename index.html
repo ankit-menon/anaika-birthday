@@ -3,92 +3,171 @@
 
 <head>
 
-<link
-rel="preconnect"
-href="https://fonts.googleapis.com">
+    <meta charset="UTF-8">
 
-<link
-href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;700&display=swap"
-rel="stylesheet">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-  
-<meta charset="UTF-8">
+    <title>Anaika Turns FOUR 🧜‍♀️</title>
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-<title>Anaika Turns FOUR!</title>
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
-<link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@300;400;600;700&display=swap"
+          rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+          href="css/style.css">
 
 </head>
 
 <body>
 
+<!-- ==========================================================
+     OCEAN BACKGROUND
+=========================================================== -->
+
 <div class="ocean">
 
-<div class="light-rays"></div>
+    <div class="light-rays"></div>
 
-<div class="waves">
-<div class="wave wave1"></div>
-<div class="wave wave2"></div>
-</div>
+    <div class="waves">
 
-<div id="bubble-container"></div>
+        <div class="wave wave1"></div>
 
-<img src="images/fish1.png" class="fish fish1">
+        <div class="wave wave2"></div>
 
-<img src="images/fish2.png" class="fish fish2">
+    </div>
 
-</div>
+    <div id="bubble-container"></div>
 
+    <div id="sparkle-container"></div>
 
-<div id="intro">
+    <img src="images/fish1.png"
+         class="fish fish1"
+         alt="Fish">
 
-<h1 class="title">
-
-🧜‍♀️
-
-Anaika Turns FOUR
-
-</h1>
-
-<p class="subtitle">
-
-Deep in the ocean,
-
-magic is real...
-
-</p>
-
-<button id="enter">
-
-🌊 Dive Into The Magic
-
-</button>
+    <img src="images/fish2.png"
+         class="fish fish2"
+         alt="Fish">
 
 </div>
 
+<!-- ==========================================================
+     INTRO PAGE
+=========================================================== -->
+
+<section id="intro">
+
+    <div class="glass-card">
+
+        <div class="emoji">
+
+            🧜‍♀️
+
+        </div>
+
+        <h1 class="title">
+
+            Anaika Turns FOUR
+
+        </h1>
+
+        <p class="subtitle">
+
+            Deep in the ocean,<br>
+            magic is real — and so are mermaids.
+
+        </p>
+
+        <button id="enter">
+
+            🌊 Dive Into The Magic
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ==========================================================
+     MUSIC
+=========================================================== -->
 
 <audio id="music" loop>
 
-<source src="audio/ocean.mp3">
+    <source src="audio/ocean.mp3"
+            type="audio/mpeg">
 
 </audio>
 
+<!-- ==========================================================
+     INVITATION
+=========================================================== -->
 
-<div id="main">
+<section id="main">
 
-<img
-src="images/invite.jpg"
-class="invite">
+    <div class="invite-container">
+
+        <img src="images/invite.jpg"
+             class="invite-image"
+             alt="Birthday Invitation">
+
+    </div>
+
+</section>
+
+<!-- ==========================================================
+     LOADING SCREEN
+=========================================================== -->
+
+<div id="loader">
+
+    <div class="loader-content">
+
+        <div class="loader-shell">
+
+            🐚
+
+        </div>
+
+        <h2>
+
+            Preparing the Magic...
+
+        </h2>
+
+    </div>
 
 </div>
 
-<script src="jss/script.js"></script>
+<!-- ==========================================================
+     FOOTER
+=========================================================== -->
+
+<footer>
+
+    Made with ❤️ for Anaika
+
+</footer>
+
+<!-- ==========================================================
+     LIBRARIES
+=========================================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+<!-- ==========================================================
+     APP
+=========================================================== -->
+
+<script src="js/script.js"></script>
 
 </body>
 
