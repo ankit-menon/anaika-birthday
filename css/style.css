@@ -847,17 +847,17 @@ body{
 
     position:absolute;
 
-    width:220px;
-
     left:50%;
 
-    top:50%;
+    top:65%;
 
-    transform:translate(-50%,-50%);
+    width:240px;
+
+    transform:translateX(-50%);
 
     z-index:10;
 
-    border:3px solid red;
+    filter:drop-shadow(0 0 35px rgba(255,220,120,.45));
 
 }
 
