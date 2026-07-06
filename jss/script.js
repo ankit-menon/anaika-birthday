@@ -6,15 +6,88 @@ const main=document.getElementById("main");
 
 const music=document.getElementById("music");
 
-button.onclick=()=>{
+button.onclick = () => {
 
-music.play();
+    music.play();
 
-intro.style.display="none";
+    const tl = gsap.timeline();
 
-main.style.display="block";
+    // Fade intro away
+    tl.to("#intro",{
+        opacity:0,
+        duration:1
+    })
 
-};
+    .set("#intro",{
+        display:"none"
+    })
+
+    .set("#main",{
+        display:"block"
+    })
+
+    // Treasure rises
+    .to("#treasure",{
+        bottom:"120px",
+        duration:2,
+        ease:"power2.out"
+    })
+
+    // Treasure glow
+    .to("#treasure",{
+        scale:1.08,
+        repeat:3,
+        yoyo:true,
+        duration:.25
+    })
+
+    // Chest shakes
+    .to("#treasure",{
+        rotation:-5,
+        duration:.12
+    })
+
+    .to("#treasure",{
+        rotation:5,
+        duration:.12
+    })
+
+    .to("#treasure",{
+        rotation:0,
+        duration:.12
+    })
+
+    // Invitation appears
+    .to("#invite-container",{
+        opacity:1,
+        duration:1
+    })
+
+    confetti({
+
+    particleCount:180,
+
+    spread:90,
+
+    origin:{y:.65}
+
+    });
+
+    .from(".invite-image",{
+
+        y:250,
+
+        scale:.2,
+
+        rotation:-12,
+
+        duration:1.6,
+
+        ease:"back.out(1.4)"
+
+    });
+
+}
 
 
 const container=document.getElementById("bubble-container");
