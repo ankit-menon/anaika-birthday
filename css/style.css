@@ -526,3 +526,359 @@ body{
     color:#fdfdfd;
 
 }
+
+/* =====================================================
+   DIVE BUTTON
+===================================================== */
+
+#enter{
+
+    position:relative;
+
+    overflow:hidden;
+
+    margin-top:30px;
+
+    padding:18px 42px;
+
+    border:none;
+
+    border-radius:60px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    background:linear-gradient(135deg,#8a5cff,#4fb8ff);
+
+    box-shadow:
+
+        0 0 25px rgba(138,92,255,.45),
+
+        0 0 60px rgba(79,184,255,.35);
+
+    transition:.35s;
+
+}
+
+#enter:hover{
+
+    transform:translateY(-4px) scale(1.05);
+
+}
+
+#enter span{
+
+    display:inline-block;
+
+    margin-right:10px;
+
+    animation:waveFloat 2.5s ease-in-out infinite;
+
+}
+
+@keyframes waveFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-6px);
+
+    }
+
+}
+
+/* =====================================================
+   SCROLL HINT
+===================================================== */
+
+.scroll-hint{
+
+    margin-top:28px;
+
+    opacity:.8;
+
+    font-size:14px;
+
+    animation:bounceHint 2s infinite;
+
+}
+
+@keyframes bounceHint{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(8px);
+
+    }
+
+}
+
+/* =====================================================
+   MAIN SCENE
+===================================================== */
+
+#main{
+
+    display:none;
+
+    position:relative;
+
+    min-height:100vh;
+
+    overflow:hidden;
+
+}
+
+/* =====================================================
+   TREASURE SCENE
+===================================================== */
+
+#treasure-scene{
+
+    position:relative;
+
+    width:100%;
+
+    height:100vh;
+
+    overflow:hidden;
+
+}
+
+/* =====================================================
+   CORAL
+===================================================== */
+
+.coral{
+
+    position:absolute;
+
+    bottom:-10px;
+
+    width:220px;
+
+    z-index:2;
+
+    opacity:.95;
+
+}
+
+.coral-left{
+
+    left:-20px;
+
+}
+
+.coral-right{
+
+    right:-20px;
+
+    transform:scaleX(-1);
+
+}
+
+/* =====================================================
+   JELLYFISH
+===================================================== */
+
+.jelly{
+
+    position:absolute;
+
+    width:120px;
+
+    opacity:.85;
+
+}
+
+.jelly1{
+
+    left:12%;
+
+    top:18%;
+
+    animation:jellyFloat1 10s ease-in-out infinite;
+
+}
+
+.jelly2{
+
+    right:12%;
+
+    top:35%;
+
+    width:95px;
+
+    animation:jellyFloat2 13s ease-in-out infinite;
+
+}
+
+@keyframes jellyFloat1{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-35px);
+
+    }
+
+}
+
+@keyframes jellyFloat2{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-45px);
+
+    }
+
+}
+
+/* =====================================================
+   TREASURE
+===================================================== */
+
+#treasure{
+
+    position:absolute;
+
+    width:240px;
+
+    left:50%;
+
+    bottom:-260px;
+
+    transform:translateX(-50%);
+
+    z-index:5;
+
+    filter:
+
+        drop-shadow(0 0 35px rgba(255,220,120,.45));
+
+}
+
+/* =====================================================
+   INVITATION
+===================================================== */
+
+#invite-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+
+    opacity:0;
+
+    transform:translateY(150px);
+
+}
+
+.invite-image{
+
+    width:min(92vw,480px);
+
+    border-radius:24px;
+
+    box-shadow:
+
+        0 25px 60px rgba(0,0,0,.45);
+
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    position:fixed;
+
+    bottom:15px;
+
+    width:100%;
+
+    text-align:center;
+
+    font-size:13px;
+
+    opacity:.5;
+
+    z-index:50;
+
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:768px){
+
+.title{
+
+    font-size:54px;
+
+}
+
+.subtitle{
+
+    font-size:18px;
+
+}
+
+.glass-card{
+
+    padding:35px 28px;
+
+}
+
+.coral{
+
+    width:160px;
+
+}
+
+#treasure{
+
+    width:190px;
+
+}
+
+.jelly{
+
+    width:80px;
+
+}
+
+}
