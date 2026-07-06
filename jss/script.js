@@ -13,7 +13,7 @@ button.onclick = () => {
     const introTL = gsap.timeline();
 
     // Fade intro away
-    tl.to("#intro",{
+    introTL.to("#intro",{
         opacity:0,
         duration:1
     })
@@ -115,7 +115,7 @@ setTimeout(()=>bubble.remove(),12000);
 
 const introTL = gsap.timeline();
 
-tl.from(".emoji", {
+introTL.from(".emoji", {
     y: -40,
     opacity: 0,
     duration: 1
