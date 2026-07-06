@@ -67,12 +67,16 @@ duration:2
 });
 
 
-gsap.from("#enter",{
-
-delay:1.5,
-
-scale:0,
-
-duration:1
-
-});
+gsap.fromTo(
+    "#enter",
+    {
+        scale: 0
+    },
+    {
+        scale: 1,
+        duration: 1,
+        delay: 1.5,
+        ease: "back.out(1.7)",
+        clearProps: "transform"
+    }
+);
