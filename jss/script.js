@@ -10,7 +10,7 @@ button.onclick = () => {
 
     music.play();
 
-    const tl = gsap.timeline();
+    const introTL = gsap.timeline();
 
     // Fade intro away
     tl.to("#intro",{
@@ -86,6 +86,8 @@ button.onclick = () => {
 
 });
 
+};
+
 
 const container=document.getElementById("bubble-container");
 
@@ -111,7 +113,7 @@ setTimeout(()=>bubble.remove(),12000);
 
 },220);
 
-const tl = gsap.timeline();
+const introTL = gsap.timeline();
 
 tl.from(".emoji", {
     y: -40,
