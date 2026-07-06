@@ -27,11 +27,23 @@ button.onclick = () => {
     })
 
     // Treasure rises
-    .to("#treasure",{
-        bottom:"120px",
+  //  .to("#treasure",{
+  //      bottom:"120px",
+  //      duration:2,
+  //      ease:"power2.out"
+  //  })
+
+    .fromTo(
+    "#treasure",
+    {
+        y:400
+    },
+    {
+        y:0,
         duration:2,
-        ease:"power2.out"
-    })
+        ease:"power3.out"
+    }
+    )
 
     // Treasure glow
     .to("#treasure",{
