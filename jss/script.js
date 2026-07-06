@@ -115,31 +115,28 @@ setTimeout(()=>bubble.remove(),12000);
 
 const introTL = gsap.timeline();
 
-introTL.from(".emoji", {
+introTL
+.from(".emoji", {
     y: -40,
     opacity: 0,
     duration: 1
 })
-
 .from(".title", {
     y: -80,
     opacity: 0,
     duration: 1,
     ease: "power3.out"
 }, "-=0.3")
-
 .from(".subtitle", {
     opacity: 0,
     y: 20,
     duration: 0.8
 }, "-=0.2")
-
 .from("#enter", {
+    y: 30,
     opacity: 0,
-    scale: 0.3,
-    duration: 0.6,
-    ease: "back.out(1.7)",
-    clearProps: "transform"
+    duration: 0.8,
+    ease: "power2.out"
 }, "-=0.2");
 
 
