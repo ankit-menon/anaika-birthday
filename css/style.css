@@ -2,15 +2,209 @@ body{
 
 margin:0;
 
-font-family:'Quicksand',sans-serif;
+overflow-x:hidden;
 
-background:#d8f4ff;
+font-family:Quicksand,sans-serif;
 
-background-image:linear-gradient(#bceeff,#fdfcff);
+background:#7bd8ff;
 
-color:#3b3b6d;
+color:white;
 
-text-align:center;
+}
+
+.ocean{
+
+position:fixed;
+
+width:100%;
+
+height:100%;
+
+background:linear-gradient(
+
+180deg,
+
+#8ee8ff,
+
+#5bc8ff,
+
+#2d95d3,
+
+#175d95
+
+);
+
+overflow:hidden;
+
+z-index:-20;
+
+}
+
+.light-rays{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+background:
+
+linear-gradient(
+
+110deg,
+
+rgba(255,255,255,.12),
+
+transparent 30%,
+
+rgba(255,255,255,.08),
+
+transparent 60%
+
+);
+
+animation:rays 12s linear infinite;
+
+}
+
+@keyframes rays{
+
+from{
+
+transform:translateX(-30%);
+
+}
+
+to{
+
+transform:translateX(30%);
+
+}
+
+}
+
+.wave{
+
+position:absolute;
+
+bottom:0;
+
+width:200%;
+
+height:180px;
+
+background:url("../images/wave.svg") repeat-x;
+
+animation:waveMove 15s linear infinite;
+
+opacity:.4;
+
+}
+
+.wave2{
+
+animation-duration:28s;
+
+opacity:.2;
+
+}
+
+@keyframes waveMove{
+
+from{
+
+transform:translateX(0);
+
+}
+
+to{
+
+transform:translateX(-50%);
+
+}
+
+}
+
+.bubble{
+
+position:absolute;
+
+bottom:-60px;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.35);
+
+animation:floatBubble linear forwards;
+
+}
+
+@keyframes floatBubble{
+
+to{
+
+transform:translateY(-110vh);
+
+opacity:0;
+
+}
+
+}
+
+.fish{
+
+position:absolute;
+
+width:90px;
+
+}
+
+.fish1{
+
+top:30%;
+
+animation:swim1 22s linear infinite;
+
+}
+
+.fish2{
+
+top:60%;
+
+animation:swim2 28s linear infinite reverse;
+
+}
+
+@keyframes swim1{
+
+from{
+
+left:-120px;
+
+}
+
+to{
+
+left:110%;
+
+}
+
+}
+
+@keyframes swim2{
+
+from{
+
+left:110%;
+
+}
+
+to{
+
+left:-120px;
+
+}
 
 }
 
@@ -20,97 +214,55 @@ height:100vh;
 
 display:flex;
 
-flex-direction:column;
-
 justify-content:center;
 
 align-items:center;
 
-background:url("../images/mermaid-bg.jpg");
+flex-direction:column;
 
-background-size:cover;
+text-align:center;
 
-}
-
-#main{
-
-display:none;
-
-animation:fade 2s;
+padding:20px;
 
 }
 
-.hero img{
+.title{
 
-width:90%;
+font-family:"Great Vibes";
 
-max-width:450px;
+font-size:70px;
 
-border-radius:25px;
+margin:0;
 
-box-shadow:0 15px 40px rgba(0,0,0,.2);
-
-margin-top:40px;
+text-shadow:0 0 30px white;
 
 }
 
-section{
+.subtitle{
 
-padding:60px 20px;
+font-size:24px;
 
-max-width:700px;
-
-margin:auto;
-
-}
-
-h1{
-
-font-family:'Great Vibes',cursive;
-
-font-size:60px;
-
-}
-
-h2{
-
-color:#7044c4;
-
-}
-
-.button{
-
-display:inline-block;
-
-padding:15px 30px;
-
-background:#6f6eff;
-
-color:white;
-
-border-radius:50px;
-
-text-decoration:none;
-
-margin-top:20px;
+margin-top:10px;
 
 }
 
 button{
 
-padding:20px 40px;
-
-font-size:20px;
+padding:20px 45px;
 
 border:none;
 
 border-radius:50px;
 
-background:#8a5cff;
+font-size:20px;
+
+cursor:pointer;
+
+background:#ff74d8;
 
 color:white;
 
-cursor:pointer;
+box-shadow:0 0 30px rgba(255,255,255,.4);
 
 transition:.3s;
 
@@ -118,26 +270,27 @@ transition:.3s;
 
 button:hover{
 
-transform:scale(1.05);
+transform:scale(1.08);
 
 }
 
-@keyframes fade{
+#main{
 
-from{
+display:none;
 
-opacity:0;
+padding:40px;
 
-transform:translateY(40px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:none;
+text-align:center;
 
 }
 
+.invite{
+
+width:min(90%,500px);
+
+border-radius:25px;
+
+box-shadow:0 20px 40px rgba(0,0,0,.35);
+
 }
+
