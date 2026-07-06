@@ -41,6 +41,34 @@ setTimeout(()=>bubble.remove(),12000);
 
 },220);
 
+const tl = gsap.timeline();
+
+tl.from(".emoji", {
+    y: -40,
+    opacity: 0,
+    duration: 1
+})
+
+.from(".title", {
+    y: -80,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out"
+}, "-=0.3")
+
+.from(".subtitle", {
+    opacity: 0,
+    y: 20,
+    duration: 0.8
+}, "-=0.2")
+
+.from("#enter", {
+    opacity: 0,
+    scale: 0.3,
+    duration: 0.6,
+    ease: "back.out(1.7)",
+    clearProps: "transform"
+}, "-=0.2");
 
 
 //gsap.from(".title",{
