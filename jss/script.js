@@ -43,40 +43,40 @@ setTimeout(()=>bubble.remove(),12000);
 
 
 
-gsap.from(".title",{
+//gsap.from(".title",{
 
-duration:2,
+//duration:2,
 
-y:-80,
+//y:-80,
 
-opacity:0,
+//opacity:0,
 
-ease:"bounce"
+//ease:"bounce"
 
-});
-
-
-gsap.from(".subtitle",{
-
-delay:.8,
-
-opacity:0,
-
-duration:2
-
-});
+//});
 
 
-gsap.fromTo(
-    "#enter",
-    {
-        scale: 0
-    },
-    {
-        scale: 1,
-        duration: 1,
-        delay: 1.5,
-        ease: "back.out(1.7)",
-        clearProps: "transform"
-    }
-);
+//gsap.from(".subtitle",{
+
+//delay:.8,
+
+//opacity:0,
+
+//duration:2
+
+//});
+
+
+//gsap.fromTo(
+//    "#enter",
+//    {
+//        scale: 0
+//    },
+//    {
+//        scale: 1,
+//        duration: 1,
+//        delay: 1.5,
+//        ease: "back.out(1.7)",
+//        clearProps: "transform"
+//    }
+//);
